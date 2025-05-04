@@ -11,8 +11,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "https://https://tutam9-frontend-hilmy.vercel.app/", 
-  credentials: true,
+  
 }));
 app.use(express.json());
 

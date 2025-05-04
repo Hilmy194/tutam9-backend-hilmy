@@ -17,6 +17,9 @@ app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/transactions', authenticate, transactionRoutes);
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
 
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
